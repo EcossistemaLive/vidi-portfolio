@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PortfÃ³lio de Produtos ViDi Â· Ecossistema Live 2026</title>
+  <title>Portfólio de Produtos ViDi · Ecossistema Live 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
@@ -38,22 +38,22 @@
       line-height: 1.6; overflow-x: hidden;
     }
 
-    /* â”€â”€â”€ TEXTURE â”€â”€â”€ */
+    /* ─── TEXTURE ─── */
     body::before {
       content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 60L60 0M-10 10L10-10M50 70L70 50' stroke='rgba(255,255,255,.015)' stroke-width='1'/%3E%3C/svg%3E");
     }
 
-    /* â”€â”€â”€ ANIMATIONS â”€â”€â”€ */
+    /* ─── ANIMATIONS ─── */
     @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
     @keyframes pulse  { 0%,100% { opacity:1; } 50% { opacity:.4; } }
     .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
     .reveal.visible { opacity:1; transform:translateY(0); }
 
-    /* â”€â”€â”€ TOP BAR â”€â”€â”€ */
+    /* ─── TOP BAR ─── */
     .top-bar { position:fixed; top:0; left:0; right:0; height:3px; background:var(--gold); z-index:200; }
 
-    /* â”€â”€â”€ NAV â”€â”€â”€ */
+    /* ─── NAV ─── */
     nav {
       position:fixed; top:3px; left:0; right:0; z-index:100;
       height:60px; display:flex; align-items:center; justify-content:space-between;
@@ -76,7 +76,7 @@
       font-weight:700; color:var(--gold);
     }
 
-    /* â”€â”€â”€ HERO â”€â”€â”€ */
+    /* ─── HERO ─── */
     .hero {
       position:relative; z-index:1;
       min-height:100vh; display:flex; flex-direction:column;
@@ -117,7 +117,7 @@
     .hero-meta-label { font-size:.58rem; letter-spacing:3px; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
     .hero-meta-value { font-size:1rem; font-weight:700; color:var(--gold-light); }
 
-    /* â”€â”€â”€ LAYOUT â”€â”€â”€ */
+    /* ─── LAYOUT ─── */
     .page-layout {
       display:grid; grid-template-columns:240px 1fr;
       max-width:1280px; margin:0 auto;
@@ -126,7 +126,7 @@
     }
     @media(max-width:900px) { .page-layout { grid-template-columns:1fr; } .sidebar { display:none; } }
 
-    /* â”€â”€â”€ SIDEBAR â”€â”€â”€ */
+    /* ─── SIDEBAR ─── */
     .sidebar {
       position:sticky; top:80px;
       background:var(--bg-card); border:1px solid var(--border);
@@ -149,7 +149,7 @@
       font-size:.58rem; font-weight:700; color:var(--gold); flex-shrink:0;
     }
 
-    /* â”€â”€â”€ CONTENT â”€â”€â”€ */
+    /* ─── CONTENT ─── */
     .content { padding-top:80px; }
     .chapter { margin-bottom:90px; scroll-margin-top:80px; }
     .chapter-eyebrow { font-size:.58rem; letter-spacing:4px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:10px; }
@@ -161,7 +161,7 @@
     .chapter-desc { font-size:.9rem; color:var(--muted); max-width:660px; line-height:1.7; margin-bottom:32px; }
     .divider { height:1px; background:var(--border); margin:80px 0; }
 
-    /* â”€â”€â”€ CARD â”€â”€â”€ */
+    /* ─── CARD ─── */
     .card {
       background:var(--bg-card); border:1px solid var(--border);
       border-radius:16px; padding:24px;
@@ -173,22 +173,22 @@
     .card-title { font-size:.95rem; font-weight:700; color:var(--white); margin-bottom:8px; }
     .card-text { font-size:.85rem; color:var(--muted); line-height:1.6; }
 
-    /* â”€â”€â”€ ACCENT CARD â”€â”€â”€ */
+    /* ─── ACCENT CARD ─── */
     .accent-card { border-left:4px solid var(--gold); }
     .accent-card.green { border-left-color:var(--green); }
     .accent-card.amber { border-left-color:var(--amber); }
 
-    /* â”€â”€â”€ PRICE TAG â”€â”€â”€ */
+    /* ─── PRICE TAG ─── */
     .price-display { margin:14px 0 10px; }
     .price-value { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:#fff; line-height:1; }
     .price-label { font-size:.72rem; color:var(--muted); margin-top:3px; }
 
-    /* â”€â”€â”€ GRIDS â”€â”€â”€ */
+    /* ─── GRIDS ─── */
     .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
     .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
     @media(max-width:700px) { .grid-2,.grid-3 { grid-template-columns:1fr; } }
 
-    /* â”€â”€â”€ BADGE â”€â”€â”€ */
+    /* ─── BADGE ─── */
     .badge {
       display:inline-flex; align-items:center;
       padding:3px 10px; border-radius:20px;
@@ -201,7 +201,7 @@
     .badge-amber { background:var(--amber-dim); color:var(--amber); border:1px solid rgba(245,158,11,.2); }
     .badge-teal  { background:rgba(0,229,204,.06); color:#00E5CC; border:1px solid rgba(0,229,204,.2); }
 
-    /* â”€â”€â”€ CALLOUT â”€â”€â”€ */
+    /* ─── CALLOUT ─── */
     .callout {
       display:flex; gap:14px; align-items:flex-start;
       padding:16px 20px; border-radius:12px;
@@ -215,13 +215,13 @@
     .callout-body   { font-size:.85rem; color:var(--muted); line-height:1.6; }
     .callout-body strong { color:var(--white); }
 
-    /* â”€â”€â”€ SECTION HEADER IN CARDS â”€â”€â”€ */
+    /* ─── SECTION HEADER IN CARDS ─── */
     .section-label {
       font-size:.62rem; letter-spacing:3px; text-transform:uppercase;
       font-weight:700; color:var(--gold); margin-bottom:10px;
     }
 
-    /* â”€â”€â”€ TABLE â”€â”€â”€ */
+    /* ─── TABLE ─── */
     .table-wrap { overflow-x:auto; border-radius:12px; border:1px solid var(--border); }
     table { width:100%; border-collapse:collapse; font-size:.84rem; }
     th { background:#0D1117; color:var(--gold-light); padding:11px 14px; font-size:.78rem; font-weight:600; text-align:left; border-bottom:1px solid var(--border); }
@@ -231,7 +231,7 @@
     .price-cell { font-weight:700; color:var(--gold-light); white-space:nowrap; }
     .confirm-cell { color:var(--muted); font-style:italic; }
 
-    /* â”€â”€â”€ TIMELINE â”€â”€â”€ */
+    /* ─── TIMELINE ─── */
     .timeline { position:relative; }
     .timeline-item {
       display:grid; grid-template-columns:28px 1fr;
@@ -252,7 +252,7 @@
       width:2px; background:var(--border);
     }
 
-    /* â”€â”€â”€ FUNNEL â”€â”€â”€ */
+    /* ─── FUNNEL ─── */
     .funnel { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
     .funnel-card {
       background:var(--bg-card); border:1px solid var(--border);
@@ -269,14 +269,14 @@
     .funnel-arrow { display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:1.5rem; padding-top:20px; }
     @media(max-width:800px) { .funnel { grid-template-columns:1fr 1fr; } }
 
-    /* â”€â”€â”€ BOT JULIO SECTION â”€â”€â”€ */
+    /* ─── BOT JULIO SECTION ─── */
     .bot-channels { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
     .channel-block { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:20px; }
     .channel-time { font-size:.65rem; letter-spacing:3px; text-transform:uppercase; font-weight:700; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--border); }
     .channel-item { display:flex; align-items:center; gap:10px; padding:6px 0; font-size:.88rem; color:var(--white); }
     .channel-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
 
-    /* â”€â”€â”€ MENTORIA HERO â”€â”€â”€ */
+    /* ─── MENTORIA HERO ─── */
     .mentoria-hero {
       background:var(--bg-card); border:1px solid var(--border);
       border-radius:20px; padding:32px; margin-bottom:24px;
@@ -305,7 +305,7 @@
     .mentoria-feat-dot.amber { background:var(--amber); }
     .badges-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; padding-top:20px; border-top:1px solid var(--border); }
 
-    /* â”€â”€â”€ CÃšPULA TICKETS â”€â”€â”€ */
+    /* ─── CÚPULA TICKETS ─── */
     .ticket-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
     @media(max-width:700px) { .ticket-grid { grid-template-columns:1fr; } }
     .ticket-card {
@@ -320,7 +320,7 @@
     .ticket-sep { height:1px; background:var(--border); margin:12px 0; }
     .ticket-feat { font-size:.82rem; color:var(--muted); line-height:1.7; }
 
-    /* â”€â”€â”€ UPSELL CARDS â”€â”€â”€ */
+    /* ─── UPSELL CARDS ─── */
     .upsell-grid { display:grid; gap:12px; }
     .upsell-card {
       background:var(--bg-card); border:1px solid var(--border);
@@ -339,14 +339,14 @@
     .two-cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
     @media(max-width:680px) { .two-cols { grid-template-columns:1fr; } }
 
-    /* â”€â”€â”€ CONFIDENTIAL â”€â”€â”€ */
+    /* ─── CONFIDENTIAL ─── */
     .conf-bar {
       background:rgba(239,68,68,.08); border:1px solid rgba(239,68,68,.25);
       border-radius:10px; padding:12px 18px;
       font-size:.82rem; color:var(--red); font-weight:700;
     }
 
-    /* â”€â”€â”€ FOOTER â”€â”€â”€ */
+    /* ─── FOOTER ─── */
     footer {
       position:relative; z-index:1;
       background:linear-gradient(to bottom, transparent, var(--bg-card));
@@ -370,15 +370,15 @@
 <nav>
   <div class="nav-brand">ViDi</div>
   <div class="nav-links">
-    <a href="#visao">VisÃ£o Geral</a>
-    <a href="#digital">FormaÃ§Ãµes</a>
-    <a href="#cupula">CÃºpula CEO</a>
+    <a href="#visao">Visão Geral</a>
+    <a href="#digital">Formações</a>
+    <a href="#cupula">Cúpula CEO</a>
     <a href="#upsells">Upsells</a>
     <a href="#mentorias">Mentorias</a>
-    <a href="#servicos">ServiÃ§os</a>
-    <a href="#precos">PreÃ§os</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#precos">Preços</a>
   </div>
-  <span class="nav-badge">Confidencial Â· 2026</span>
+  <span class="nav-badge">Confidencial · 2026</span>
 </nav>
 
 <!-- HERO -->
@@ -386,18 +386,18 @@
   <div class="hero-left-bar"></div>
   <div class="hero-eyebrow">
     <span class="hero-dot"></span>
-    Ecossistema Live Â· 2026
+    Ecossistema Live · 2026
   </div>
-  <h1>PortfÃ³lio de Produtos<br/>ViDi</h1>
+  <h1>Portfólio de Produtos<br/>ViDi</h1>
   <p class="hero-sub">
-    Ferramental Â· Resultado<br/>
+    Ferramental · Resultado<br/>
     <span style="opacity:.6;font-size:.85em">Luiz Portal &amp; Ibrahim Boufleur</span>
   </p>
   <div class="hero-meta">
-    <div class="hero-meta-item"><div class="hero-meta-label">Evento</div><div class="hero-meta-value">CÃºpula CEO 2026</div></div>
-    <div class="hero-meta-item"><div class="hero-meta-label">Local</div><div class="hero-meta-value">Royal Tulip Â· BrasÃ­lia</div></div>
-    <div class="hero-meta-item"><div class="hero-meta-label">Uso</div><div class="hero-meta-value">Interno Â· Confidencial</div></div>
-    <div class="hero-meta-item"><div class="hero-meta-label">VersÃ£o</div><div class="hero-meta-value">Abr 2026</div></div>
+    <div class="hero-meta-item"><div class="hero-meta-label">Evento</div><div class="hero-meta-value">Cúpula CEO 2026</div></div>
+    <div class="hero-meta-item"><div class="hero-meta-label">Local</div><div class="hero-meta-value">Royal Tulip · Brasília</div></div>
+    <div class="hero-meta-item"><div class="hero-meta-label">Uso</div><div class="hero-meta-value">Interno · Confidencial</div></div>
+    <div class="hero-meta-item"><div class="hero-meta-label">Versão</div><div class="hero-meta-value">Abr 2026</div></div>
   </div>
 </section>
 
@@ -406,105 +406,105 @@
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <div class="sidebar-title">Ãndice</div>
+    <div class="sidebar-title">Índice</div>
     <ul class="sidebar-nav">
-      <li><a href="#visao"><span class="sidebar-num">1</span> VisÃ£o Geral</a></li>
-      <li><a href="#digital"><span class="sidebar-num">2</span> FormaÃ§Ãµes Digitais</a></li>
-      <li><a href="#cupula"><span class="sidebar-num">3</span> CÃºpula CEO</a></li>
+      <li><a href="#visao"><span class="sidebar-num">1</span> Visão Geral</a></li>
+      <li><a href="#digital"><span class="sidebar-num">2</span> Formações Digitais</a></li>
+      <li><a href="#cupula"><span class="sidebar-num">3</span> Cúpula CEO</a></li>
       <li><a href="#upsells"><span class="sidebar-num">4</span> Upsells &amp; Downsells</a></li>
       <li><a href="#mentorias"><span class="sidebar-num">5</span> Mentorias</a></li>
-      <li><a href="#servicos"><span class="sidebar-num">6</span> Consultoria &amp; ImersÃµes</a></li>
+      <li><a href="#servicos"><span class="sidebar-num">6</span> Consultoria &amp; Imersões</a></li>
       <li><a href="#funil"><span class="sidebar-num">7</span> Jornada do Cliente</a></li>
-      <li><a href="#precos"><span class="sidebar-num">8</span> Resumo de PreÃ§os</a></li>
+      <li><a href="#precos"><span class="sidebar-num">8</span> Resumo de Preços</a></li>
     </ul>
   </aside>
 
   <!-- CONTENT -->
   <main class="content">
 
-    <!-- 1. VISÃƒO GERAL -->
+    <!-- 1. VISÃO GERAL -->
     <section class="chapter reveal" id="visao">
-      <div class="chapter-eyebrow">01 Â· PortfÃ³lio</div>
-      <h2 class="chapter-title">VisÃ£o Geral dos Produtos</h2>
+      <div class="chapter-eyebrow">01 · Portfólio</div>
+      <h2 class="chapter-title">Visão Geral dos Produtos</h2>
 
       <div class="callout callout-gold" style="margin-bottom:24px">
-        <span class="callout-icon">ðŸ”’</span>
-        <div class="callout-body"><strong>Regra crÃ­tica:</strong> Valores sÃ£o compartilhados exclusivamente em reuniÃµes comerciais privadas. Nunca mencione em comunicaÃ§Ãµes pÃºblicas ou conversas gravadas.</div>
+        <span class="callout-icon">🔒</span>
+        <div class="callout-body"><strong>Regra crítica:</strong> Valores são compartilhados exclusivamente em reuniões comerciais privadas. Nunca mencione em comunicações públicas ou conversas gravadas.</div>
       </div>
 
       <div class="grid-2">
-        <!-- Bot JÃºlio -->
+        <!-- Bot Júlio -->
         <div class="card accent-card">
-          <span class="card-icon">ðŸ¤–</span>
-          <div class="card-title">Bot JÃºlio â€” Vendas AutomÃ¡ticas</div>
+          <span class="card-icon">🤖</span>
+          <div class="card-title">Bot Júlio — Vendas Automáticas</div>
           <div class="bot-channels" style="margin-top:14px">
             <div class="channel-block">
               <div class="channel-time" style="color:var(--amber)">Durante o Evento</div>
-              <div class="channel-item"><span class="channel-dot" style="background:var(--amber)"></span>VIP Pass (R$ 8.998)</div>
-              <div class="channel-item"><span class="channel-dot" style="background:var(--amber)"></span>CÃºpula Dinner (R$ 8.998)</div>
-              <div class="channel-item"><span class="channel-dot" style="background:var(--amber)"></span>Pacote SÃ³cio (R$ 749/sÃ³cio)</div>
-              <div class="channel-item"><span class="channel-dot" style="background:var(--amber)"></span>DiagnÃ³stico Catalyst (R$ 248)</div>
+              <div class="channel-item"><span class="channel-dot" style="background:var(--amber)"></span>VIP Pass (R$ 998)</div>
+              <div class="channel-item"><span class="channel-dot" style="background:var(--amber)"></span>Cúpula Dinner (R$ 8.998)</div>
+              <div class="channel-item"><span class="channel-dot" style="background:var(--amber)"></span>Pacote Sócio (R$ 749/sócio)</div>
+              <div class="channel-item"><span class="channel-dot" style="background:var(--amber)"></span>Diagnóstico Catalyst (R$ 248)</div>
             </div>
             <div class="channel-block">
-              <div class="channel-time" style="color:var(--gold-light)">PÃ³s-Evento</div>
-              <div class="channel-item"><span class="channel-dot" style="background:var(--gold-light)"></span>Mentorias (Individual Â· Grupo)</div>
-              <div class="channel-item"><span class="channel-dot" style="background:var(--gold-light)"></span>AlmoÃ§o com o CEO</div>
-              <div class="channel-item"><span class="channel-dot" style="background:var(--gold-light)"></span>Novos eventos e imersÃµes</div>
+              <div class="channel-time" style="color:var(--gold-light)">Pós-Evento</div>
+              <div class="channel-item"><span class="channel-dot" style="background:var(--gold-light)"></span>Mentorias (Individual · Grupo)</div>
+              <div class="channel-item"><span class="channel-dot" style="background:var(--gold-light)"></span>Almoço com o CEO</div>
+              <div class="channel-item"><span class="channel-dot" style="background:var(--gold-light)"></span>Novos eventos e imersões</div>
             </div>
           </div>
         </div>
 
         <!-- Time Comercial -->
         <div class="card accent-card" style="border-left-color:var(--gold-light)">
-          <span class="card-icon">ðŸ¤</span>
-          <div class="card-title">Time Comercial â€” Alto Ticket</div>
+          <span class="card-icon">🤝</span>
+          <div class="card-title">Time Comercial — Alto Ticket</div>
           <div class="card-text" style="margin-top:10px">
             <div class="section-label" style="margin-bottom:10px">Produtos fechados pelo time</div>
-            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>CÃºpula CEO â€” Ingresso (R$ 1.497)</div>
-            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>FormaÃ§Ã£o do LÃ­der (R$ 698)</div>
-            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>FormaÃ§Ã£o do CEO (R$ 698)</div>
+            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>Cúpula CEO — Ingresso (R$ 1.497)</div>
+            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>Formação do Líder (R$ 698)</div>
+            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>Formação do CEO (R$ 698)</div>
             <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>Consultoria ViDi</div>
-            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>FormaÃ§Ãµes Presenciais</div>
-            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>ImersÃµes Estruturadas</div>
-            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>ExperiÃªncias Exclusivas</div>
-            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>DiagnÃ³stico Catalyst</div>
+            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>Formações Presenciais</div>
+            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>Imersões Estruturadas</div>
+            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>Experiências Exclusivas</div>
+            <div class="channel-item" style="padding:4px 0"><span class="channel-dot" style="background:var(--gold-light)"></span>Diagnóstico Catalyst</div>
           </div>
         </div>
       </div>
     </section>
     <div class="divider"></div>
 
-    <!-- 2. FORMAÃ‡Ã•ES DIGITAIS -->
+    <!-- 2. FORMAÇÕES DIGITAIS -->
     <section class="chapter reveal" id="digital">
-      <div class="chapter-eyebrow">02 Â· Trilha Online</div>
+      <div class="chapter-eyebrow">02 · Trilha Online</div>
       <h2 class="chapter-title">Produtos Digitais</h2>
-      <p class="chapter-desc">Cursos online disponÃ­veis Â· comercializados pelo time comercial</p>
+      <p class="chapter-desc">Cursos online disponíveis · comercializados pelo time comercial</p>
 
       <div class="grid-2">
-        <!-- FormaÃ§Ã£o do LÃ­der -->
+        <!-- Formação do Líder -->
         <div class="card accent-card">
-          <span class="card-icon">ðŸŽ“</span>
-          <div class="card-title">FormaÃ§Ã£o do LÃ­der</div>
-          <div class="price-display"><div class="price-value">R$ 698</div><div class="price-label">Acesso digital Â· plataforma online</div></div>
+          <span class="card-icon">🎓</span>
+          <div class="card-title">Formação do Líder</div>
+          <div class="price-display"><div class="price-value">R$ 698</div><div class="price-label">Acesso digital · plataforma online</div></div>
           <div class="card-text" style="margin-top:12px">
-            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Trilha completa de lideranÃ§a</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Para gestores e empresÃ¡rios em inÃ­cio de jornada</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Cultura de alta performance e resiliÃªncia</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>ConteÃºdo prÃ¡tico e aplicÃ¡vel ao dia a dia</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Trilha completa de liderança</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Para gestores e empresários em início de jornada</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Cultura de alta performance e resiliência</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Conteúdo prático e aplicável ao dia a dia</div>
           </div>
-          <div style="margin-top:14px"><span class="badge badge-gold">LideranÃ§a</span></div>
+          <div style="margin-top:14px"><span class="badge badge-gold">Liderança</span></div>
         </div>
 
-        <!-- FormaÃ§Ã£o do CEO -->
+        <!-- Formação do CEO -->
         <div class="card accent-card">
-          <span class="card-icon">ðŸ¢</span>
-          <div class="card-title">FormaÃ§Ã£o do CEO</div>
-          <div class="price-display"><div class="price-value">R$ 698</div><div class="price-label">Acesso digital Â· plataforma online</div></div>
+          <span class="card-icon">🏢</span>
+          <div class="card-title">Formação do CEO</div>
+          <div class="price-display"><div class="price-value">R$ 698</div><div class="price-label">Acesso digital · plataforma online</div></div>
           <div class="card-text" style="margin-top:12px">
-            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Trilha CEO completa Â· governanÃ§a e escala</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Trilha CEO completa · governança e escala</div>
             <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Para fundadores, CEOs e quem quer se tornar CEO</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>VisÃ£o estratÃ©gica, estruturaÃ§Ã£o e lideranÃ§a</div>
-            <div class="mentoria-feat" style="color:var(--amber)"><span class="mentoria-feat-dot amber"></span>âš™ AutomaÃ§Ã£o de resgate de lead perdido da CÃºpula CEO</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Visão estratégica, estruturação e liderança</div>
+            <div class="mentoria-feat" style="color:var(--amber)"><span class="mentoria-feat-dot amber"></span>⚙ Automação de resgate de lead perdido da Cúpula CEO</div>
           </div>
           <div style="margin-top:14px"><span class="badge badge-gold">Trilha CEO</span></div>
         </div>
@@ -512,17 +512,17 @@
     </section>
     <div class="divider"></div>
 
-    <!-- 3. CÃšPULA CEO -->
+    <!-- 3. CÚPULA CEO -->
     <section class="chapter reveal" id="cupula">
-      <div class="chapter-eyebrow">03 Â· Evento Presencial</div>
-      <h2 class="chapter-title">CÃºpula CEO 2026</h2>
+      <div class="chapter-eyebrow">03 · Evento Presencial</div>
+      <h2 class="chapter-title">Cúpula CEO 2026</h2>
 
       <div class="callout callout-gold" style="margin-bottom:24px">
-        <span class="callout-icon">ðŸ“</span>
+        <span class="callout-icon">📍</span>
         <div class="callout-body">
-          <strong>Royal Tulip Â· BrasÃ­lia</strong> &nbsp;Â·&nbsp; ImersÃ£o de 1 dia &nbsp;Â·&nbsp; Networking qualificado &nbsp;Â·&nbsp; ConteÃºdo prÃ¡tico para C-Levels<br/>
-          <span style="margin-top:5px;display:block">PÃºblico-alvo: CEOs, CFOs, Fundadores, Diretores Â· Empresas R$ 1M a R$ 50M+</span>
-          <span style="margin-top:4px;display:block;font-size:.8rem">Canal de entrada: Google Ads Â· Meta Ads Â· Lives de aquecimento Â· AlmoÃ§o com o CEO Â· IndicaÃ§Ãµes</span>
+          <strong>Royal Tulip · Brasília</strong> &nbsp;·&nbsp; Imersão de 1 dia &nbsp;·&nbsp; Networking qualificado &nbsp;·&nbsp; Conteúdo prático para C-Levels<br/>
+          <span style="margin-top:5px;display:block">Público-alvo: CEOs, CFOs, Fundadores, Diretores · Empresas R$ 1M a R$ 50M+</span>
+          <span style="margin-top:4px;display:block;font-size:.8rem">Canal de entrada: Google Ads · Meta Ads · Lives de aquecimento · Almoço com o CEO · Indicações</span>
         </div>
       </div>
 
@@ -530,31 +530,31 @@
         <!-- Standard -->
         <div class="ticket-card">
           <div class="ticket-top-bar" style="background:var(--gold)"></div>
-          <div class="ticket-icon">ðŸŽ«</div>
+          <div class="ticket-icon">🎫</div>
           <div class="ticket-name" style="color:var(--gold)">Ingresso Standard</div>
           <div class="ticket-price">R$ 1.497</div>
           <div class="ticket-sep"></div>
-          <div class="ticket-feat">Acesso completo ao evento presencial<br/>Palestras Â· PainÃ©is Â· Networking<br/>Dia inteiro no Royal Tulip Â· BrasÃ­lia</div>
+          <div class="ticket-feat">Acesso completo ao evento presencial<br/>Palestras · Painéis · Networking<br/>Dia inteiro no Royal Tulip · Brasília</div>
           <div style="margin-top:12px"><span class="badge badge-gold">Entrada</span></div>
         </div>
         <!-- VIP -->
         <div class="ticket-card">
           <div class="ticket-top-bar" style="background:var(--gold-light)"></div>
-          <div class="ticket-icon">â­</div>
+          <div class="ticket-icon">⭐</div>
           <div class="ticket-name" style="color:var(--gold-light)">VIP Pass</div>
-          <div class="ticket-price">R$ 8.998</div>
+          <div class="ticket-price">R$ 998</div>
           <div class="ticket-sep"></div>
-          <div class="ticket-feat">Tudo do Standard +<br/>Assentos prioritÃ¡rios Â· Acesso exclusivo<br/>AlmoÃ§o com os palestrantes<br/>Traslado em lancha</div>
+          <div class="ticket-feat">Tudo do Standard +<br/>Assentos prioritários · Acesso exclusivo<br/>Almoço com os palestrantes<br/>Traslado em lancha</div>
           <div style="margin-top:12px"><span class="badge badge-green">Upsell</span></div>
         </div>
         <!-- Virtual Pass -->
         <div class="ticket-card">
           <div class="ticket-top-bar" style="background:var(--muted)"></div>
-          <div class="ticket-icon">ðŸŒ</div>
+          <div class="ticket-icon">🌐</div>
           <div class="ticket-name" style="color:var(--muted)">Virtual Pass</div>
           <div class="ticket-price" style="color:var(--muted)">R$ 749</div>
           <div class="ticket-sep"></div>
-          <div class="ticket-feat">Para quem nÃ£o pode comparecer<br/>Acesso online ao conteÃºdo<br/>Captura de quem ficou de fora</div>
+          <div class="ticket-feat">Para quem não pode comparecer<br/>Acesso online ao conteúdo<br/>Captura de quem ficou de fora</div>
           <div style="margin-top:12px"><span class="badge badge-red">Downsell</span></div>
         </div>
       </div>
@@ -563,33 +563,33 @@
 
     <!-- 4. UPSELLS & DOWNSELLS -->
     <section class="chapter reveal" id="upsells">
-      <div class="chapter-eyebrow">04 Â· Ecossistema de Ofertas</div>
+      <div class="chapter-eyebrow">04 · Ecossistema de Ofertas</div>
       <h2 class="chapter-title">Upsells &amp; Downsells</h2>
 
       <div class="callout callout-green" style="margin-bottom:24px">
-        <span class="callout-icon">ðŸ¤–</span>
-        <div class="callout-body"><strong>Bot JÃºlio vende automaticamente</strong> todos os upsells durante o evento e as mentorias / novos eventos no pÃ³s-evento â€” sem envolvimento do time comercial.</div>
+        <span class="callout-icon">🤖</span>
+        <div class="callout-body"><strong>Bot Júlio vende automaticamente</strong> todos os upsells durante o evento e as mentorias / novos eventos no pós-evento — sem envolvimento do time comercial.</div>
       </div>
 
       <div class="two-cols">
         <!-- Upsells -->
         <div>
-          <div style="font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">â¬† Upsells</div>
+          <div style="font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">⬆ Upsells</div>
           <div class="upsell-grid">
             <div class="upsell-card">
-              <div><div class="upsell-name">VIP Pass</div><div class="upsell-when">Quando: Na compra ou no check-in</div><div class="upsell-note">Assentos prioritÃ¡rios + almoÃ§o com palestrantes + traslado em lancha</div></div>
+              <div><div class="upsell-name">VIP Pass</div><div class="upsell-when">Quando: Na compra ou no check-in</div><div class="upsell-note">Assentos prioritários + almoço com palestrantes + traslado em lancha</div></div>
+              <div class="upsell-price">R$ 998</div>
+            </div>
+            <div class="upsell-card">
+              <div><div class="upsell-name">Cúpula Dinner</div><div class="upsell-when">Quando: Para Cat-A via Bot Júlio</div><div class="upsell-note">Jantar + rodada de negócios na véspera + diagnóstico / parecer técnico · Limitado a 20 participantes</div></div>
               <div class="upsell-price">R$ 8.998</div>
             </div>
             <div class="upsell-card">
-              <div><div class="upsell-name">CÃºpula Dinner</div><div class="upsell-when">Quando: Para Cat-A via Bot JÃºlio</div><div class="upsell-note">Jantar + rodada de negÃ³cios na vÃ©spera + diagnÃ³stico / parecer tÃ©cnico Â· Limitado a 20 participantes</div></div>
-              <div class="upsell-price">R$ 8.998</div>
+              <div><div class="upsell-name">Pacote Sócio</div><div class="upsell-when">Quando: 2 ou mais sócios juntos</div><div class="upsell-note">Desconto por volume · ingresso conjunto</div></div>
+              <div class="upsell-price">R$ 749<span style="font-size:.7rem;font-weight:400">/sócio</span></div>
             </div>
             <div class="upsell-card">
-              <div><div class="upsell-name">Pacote SÃ³cio</div><div class="upsell-when">Quando: 2 ou mais sÃ³cios juntos</div><div class="upsell-note">Desconto por volume Â· ingresso conjunto</div></div>
-              <div class="upsell-price">R$ 749<span style="font-size:.7rem;font-weight:400">/sÃ³cio</span></div>
-            </div>
-            <div class="upsell-card">
-              <div><div class="upsell-name">DiagnÃ³stico Catalyst</div><div class="upsell-when">Quando: Dor identificada no evento</div><div class="upsell-note">AnÃ¡lise via formulÃ¡rio Â· mapeamento de dor estratÃ©gico</div></div>
+              <div><div class="upsell-name">Diagnóstico Catalyst</div><div class="upsell-when">Quando: Dor identificada no evento</div><div class="upsell-note">Análise via formulário · mapeamento de dor estratégico</div></div>
               <div class="upsell-price">R$ 248</div>
             </div>
           </div>
@@ -597,14 +597,14 @@
 
         <!-- Downsells -->
         <div>
-          <div style="font-size:.78rem;font-weight:700;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">â¬‡ Downsells</div>
+          <div style="font-size:.78rem;font-weight:700;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">⬇ Downsells</div>
           <div class="upsell-grid">
             <div class="upsell-card downsell">
-              <div><div class="upsell-name">Virtual Pass</div><div class="upsell-when">Quando: NÃ£o pode comparecer presencialmente</div><div class="upsell-note red">Acesso online ao conteÃºdo do evento</div></div>
+              <div><div class="upsell-name">Virtual Pass</div><div class="upsell-when">Quando: Não pode comparecer presencialmente</div><div class="upsell-note red">Acesso online ao conteúdo do evento</div></div>
               <div class="upsell-price red">R$ 749</div>
             </div>
             <div class="upsell-card downsell">
-              <div><div class="upsell-name">CEO Toolkit</div><div class="upsell-when">Quando: NÃ£o estÃ¡ pronto para o evento</div><div class="upsell-note red">Material preparatÃ³rio para a prÃ³xima ediÃ§Ã£o</div></div>
+              <div><div class="upsell-name">CEO Toolkit</div><div class="upsell-when">Quando: Não está pronto para o evento</div><div class="upsell-note red">Material preparatório para a próxima edição</div></div>
               <div class="upsell-price red">R$ 449</div>
             </div>
           </div>
@@ -612,24 +612,24 @@
       </div>
 
       <div class="callout callout-gold" style="margin-top:24px">
-        <span class="callout-icon">ðŸ’¡</span>
-        <div class="callout-body"><strong>EstratÃ©gia de maximizaÃ§Ã£o por lead:</strong> Ingresso (R$ 1.497) â†’ VIP Pass (R$ 8.998) â†’ DiagnÃ³stico Catalyst (R$ 248) â†’ Mentoria de alto ticket</div>
+        <span class="callout-icon">💡</span>
+        <div class="callout-body"><strong>Estratégia de maximização por lead:</strong> Ingresso (R$ 1.497) → VIP Pass (R$ 998) → Diagnóstico Catalyst (R$ 248) → Mentoria de alto ticket</div>
       </div>
     </section>
     <div class="divider"></div>
 
     <!-- 5. MENTORIAS -->
     <section class="chapter reveal" id="mentorias">
-      <div class="chapter-eyebrow">05 Â· Alto Ticket</div>
+      <div class="chapter-eyebrow">05 · Alto Ticket</div>
       <h2 class="chapter-title">Mentorias</h2>
 
-      <!-- Mentoria Individual: O CÃ³digo da Nova LideranÃ§a -->
+      <!-- Mentoria Individual: O Código da Nova Liderança -->
       <div class="mentoria-hero">
         <div class="mentoria-header">
           <div>
-            <div class="mentoria-name">O CÃ³digo da Nova LideranÃ§a</div>
-            <div class="mentoria-mentor">ðŸ‘‘ Mentor: Luiz Portal</div>
-            <div class="mentoria-role">Fundador Â· Head Comercial e de Produto</div>
+            <div class="mentoria-name">O Código da Nova Liderança</div>
+            <div class="mentoria-mentor">👑 Mentor: Luiz Portal</div>
+            <div class="mentoria-role">Fundador · Head Comercial e de Produto</div>
           </div>
           <div class="mentoria-price-block">
             <div class="mentoria-price">R$ 39.990</div>
@@ -640,25 +640,25 @@
           <div>
             <div class="mentoria-col-title">Formato</div>
             <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Modalidade: Individual</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>10 encontros Â· 1 vez por mÃªs</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>10 encontros · 1 vez por mês</div>
             <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Presencial ou online</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Baseado no MÃ©todo ViDi</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Baseado no Método ViDi</div>
             <div class="mentoria-feat"><span class="mentoria-feat-dot"></span>Foco em cultura de alta performance</div>
           </div>
           <div>
             <div class="mentoria-col-title">Limites &amp; Acesso</div>
             <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Limitado a 10 mentorados</div>
             <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Prioridade em todos os eventos ViDi</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Acesso Ã  rede de CEOs mentorados</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>DiagnÃ³stico individualizado</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Acompanhamento mensal contÃ­nuo</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Acesso à rede de CEOs mentorados</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Diagnóstico individualizado</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Acompanhamento mensal contínuo</div>
           </div>
         </div>
         <div class="badges-row">
-          <span class="badge badge-green">âœ… Estruturada</span>
+          <span class="badge badge-green">✅ Estruturada</span>
           <span class="badge badge-gold">Individual</span>
           <span class="badge badge-amber">Limitado a 10 mentorados</span>
-          <span class="badge" style="background:var(--gold-dim);color:var(--gold-light);border:1px solid var(--gold-border)">â­ Prioridade nos eventos</span>
+          <span class="badge" style="background:var(--gold-dim);color:var(--gold-light);border:1px solid var(--gold-border)">⭐ Prioridade nos eventos</span>
         </div>
       </div>
 
@@ -667,12 +667,12 @@
         <div class="mentoria-header">
           <div>
             <div class="mentoria-name">Mentoria em Grupo ViDi</div>
-            <div class="mentoria-mentor">ðŸ‘¥ Luiz Portal &amp; Ibrahim Boufleur</div>
+            <div class="mentoria-mentor">👥 Luiz Portal &amp; Ibrahim Boufleur</div>
             <div class="mentoria-role">Presencial ou Online</div>
           </div>
           <div class="mentoria-price-block">
             <div class="mentoria-price" style="color:var(--muted)">A confirmar</div>
-            <div class="mentoria-price-sub">preÃ§o a definir</div>
+            <div class="mentoria-price-sub">preço a definir</div>
           </div>
         </div>
 
@@ -681,22 +681,22 @@
           <div class="timeline-item">
             <div class="timeline-dot">1</div>
             <div class="timeline-body-wrap">
-              <div class="timeline-title">1Âº Encontro â€” Individual</div>
-              <div class="timeline-desc">DiagnÃ³stico e alinhamento de metas pessoais de cada participante</div>
+              <div class="timeline-title">1º Encontro — Individual</div>
+              <div class="timeline-desc">Diagnóstico e alinhamento de metas pessoais de cada participante</div>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-dot" style="font-size:.6rem">2â€“11</div>
+            <div class="timeline-dot" style="font-size:.6rem">2–11</div>
             <div class="timeline-body-wrap">
-              <div class="timeline-title">10 Encontros Centrais â€” Em Grupo</div>
-              <div class="timeline-desc">Online ou presencial Â· ConteÃºdo aplicado e trocas ricas entre pares de alto nÃ­vel</div>
+              <div class="timeline-title">10 Encontros Centrais — Em Grupo</div>
+              <div class="timeline-desc">Online ou presencial · Conteúdo aplicado e trocas ricas entre pares de alto nível</div>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot gold-light">12</div>
             <div class="timeline-body-wrap">
-              <div class="timeline-title">12Âº Encontro â€” Individual</div>
-              <div class="timeline-desc">RevisÃ£o de resultados, consolidaÃ§Ã£o e plano de continuidade personalizado</div>
+              <div class="timeline-title">12º Encontro — Individual</div>
+              <div class="timeline-desc">Revisão de resultados, consolidação e plano de continuidade personalizado</div>
             </div>
           </div>
         </div>
@@ -712,8 +712,8 @@
         <div class="mentoria-header">
           <div>
             <div class="mentoria-name">Mentoria CEO</div>
-            <div class="mentoria-mentor">ðŸŽ™ï¸ Mentor: Ibrahim Boufleur</div>
-            <div class="mentoria-role">Fundador Â· Mentor estratÃ©gico de CEOs</div>
+            <div class="mentoria-mentor">🎙️ Mentor: Ibrahim Boufleur</div>
+            <div class="mentoria-role">Fundador · Mentor estratégico de CEOs</div>
           </div>
           <div class="mentoria-price-block">
             <div class="mentoria-price">R$ 59.998</div>
@@ -726,74 +726,74 @@
             <div class="mentoria-feat"><span class="mentoria-feat-dot amber"></span>Modalidade: Individual</div>
             <div class="mentoria-feat"><span class="mentoria-feat-dot amber"></span>10 encontros mensais</div>
             <div class="mentoria-feat"><span class="mentoria-feat-dot amber"></span>Presencial ou online com Ibrahim</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot amber"></span>The Catalyst â€” programa de elite</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot amber"></span>Aprofundamento estruturado por mÃ³dulos</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot amber"></span>The Catalyst — programa de elite</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot amber"></span>Aprofundamento estruturado por módulos</div>
           </div>
           <div>
             <div class="mentoria-col-title">Temas &amp; Acesso</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>GovernanÃ§a corporativa e sucessÃ£o</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Marketing estratÃ©gico e posicionamento</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>M&amp;A, captaÃ§Ã£o e exit strategy</div>
-            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>EstruturaÃ§Ã£o financeira e internacionalizaÃ§Ã£o</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Governança corporativa e sucessão</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Marketing estratégico e posicionamento</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>M&amp;A, captação e exit strategy</div>
+            <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Estruturação financeira e internacionalização</div>
             <div class="mentoria-feat"><span class="mentoria-feat-dot gold-light"></span>Acesso mais exclusivo para mentorados</div>
           </div>
         </div>
         <div class="badges-row">
-          <span class="badge badge-amber">âš  Em DefiniÃ§Ã£o</span>
+          <span class="badge badge-amber">⚠ Em Definição</span>
           <span class="badge badge-gold">Individual</span>
           <span class="badge badge-green">Prioridade nos eventos</span>
         </div>
       </div>
 
       <div class="callout" style="margin-top:20px">
-        <span class="callout-icon">âš–ï¸</span>
-        <div class="callout-body">Luiz e Ibrahim tÃªm contribuiÃ§Ãµes equivalentes e complementares. A consultoria pode envolver os dois conforme a natureza do projeto. Comunicar com equilÃ­brio ao lead.</div>
+        <span class="callout-icon">⚖️</span>
+        <div class="callout-body">Luiz e Ibrahim têm contribuições equivalentes e complementares. A consultoria pode envolver os dois conforme a natureza do projeto. Comunicar com equilíbrio ao lead.</div>
       </div>
     </section>
     <div class="divider"></div>
 
-    <!-- 6. CONSULTORIA & SERVIÃ‡OS -->
+    <!-- 6. CONSULTORIA & SERVIÇOS -->
     <section class="chapter reveal" id="servicos">
-      <div class="chapter-eyebrow">06 Â· ServiÃ§os Presenciais</div>
-      <h2 class="chapter-title">Consultoria, FormaÃ§Ãµes e ImersÃµes</h2>
+      <div class="chapter-eyebrow">06 · Serviços Presenciais</div>
+      <h2 class="chapter-title">Consultoria, Formações e Imersões</h2>
 
       <!-- Consultoria -->
       <div class="card accent-card" style="margin-bottom:24px">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
           <div>
-            <span class="card-icon">ðŸ”¬</span>
+            <span class="card-icon">🔬</span>
             <div class="card-title">Consultoria ViDi</div>
           </div>
           <span class="badge badge-gold">Alto Ticket</span>
         </div>
         <div class="card-text" style="margin-top:10px">
-          A ViDi nÃ£o vende mÃ©todo â€” vende ferramental e resultado. DiagnÃ³stico real + entrega do que precisa ser feito, sem meios-termos ou atalhos. Envolve Luiz e Ibrahim conforme a natureza do projeto.
+          A ViDi não vende método — vende ferramental e resultado. Diagnóstico real + entrega do que precisa ser feito, sem meios-termos ou atalhos. Envolve Luiz e Ibrahim conforme a natureza do projeto.
         </div>
       </div>
 
       <div class="grid-2">
         <div class="card">
-          <span class="card-icon">ðŸŽ“</span>
-          <div class="card-title">FormaÃ§Ãµes Presenciais</div>
-          <div class="card-text">FormaÃ§Ã£o de LÃ­deres Â· FormaÃ§Ã£o de CEOs Â· Oficinas TÃ©cnicas. Participante sai com aÃ§Ãµes claras e resultado direto.</div>
+          <span class="card-icon">🎓</span>
+          <div class="card-title">Formações Presenciais</div>
+          <div class="card-text">Formação de Líderes · Formação de CEOs · Oficinas Técnicas. Participante sai com ações claras e resultado direto.</div>
           <div style="margin-top:12px"><span class="badge badge-gold">Alto Ticket</span></div>
         </div>
         <div class="card">
-          <span class="card-icon">ðŸŒŠ</span>
-          <div class="card-title">ImersÃµes Estruturadas</div>
-          <div class="card-text">Jornada intensiva de 1 a 3 dias. Clareza de problemas, prioridades e prÃ³ximos passos.</div>
+          <span class="card-icon">🌊</span>
+          <div class="card-title">Imersões Estruturadas</div>
+          <div class="card-text">Jornada intensiva de 1 a 3 dias. Clareza de problemas, prioridades e próximos passos.</div>
           <div style="margin-top:12px"><span class="badge badge-gold">Alto Ticket</span></div>
         </div>
         <div class="card">
-          <span class="card-icon">ðŸ½ï¸</span>
-          <div class="card-title">AlmoÃ§o com o CEO</div>
-          <div class="card-text">Para Cat-A e mentorados de alto engajamento. Canal de entrada qualificado para novos participantes da CÃºpula CEO.</div>
+          <span class="card-icon">🍽️</span>
+          <div class="card-title">Almoço com o CEO</div>
+          <div class="card-text">Para Cat-A e mentorados de alto engajamento. Canal de entrada qualificado para novos participantes da Cúpula CEO.</div>
           <div style="margin-top:12px"><span class="badge badge-teal">Cat-A / Entrada</span></div>
         </div>
         <div class="card">
-          <span class="card-icon">ðŸ“‹</span>
-          <div class="card-title">DiagnÃ³stico Catalyst</div>
-          <div class="card-text">AnÃ¡lise via formulÃ¡rio Â· mapeamento de dor estratÃ©gico. Usado como upsell no evento e em reuniÃµes comerciais.</div>
+          <span class="card-icon">📋</span>
+          <div class="card-title">Diagnóstico Catalyst</div>
+          <div class="card-text">Análise via formulário · mapeamento de dor estratégico. Usado como upsell no evento e em reuniões comerciais.</div>
           <div style="margin-top:12px"><span class="badge badge-amber">R$ 248</span></div>
         </div>
       </div>
@@ -802,55 +802,55 @@
 
     <!-- 7. JORNADA DO CLIENTE -->
     <section class="chapter reveal" id="funil">
-      <div class="chapter-eyebrow">07 Â· Processo Comercial</div>
+      <div class="chapter-eyebrow">07 · Processo Comercial</div>
       <h2 class="chapter-title">Jornada do Cliente</h2>
-      <p class="chapter-desc">Do Lead ao Alto Ticket â€” entenda cada etapa do funil ViDi.</p>
+      <p class="chapter-desc">Do Lead ao Alto Ticket — entenda cada etapa do funil ViDi.</p>
 
       <div class="funnel">
         <div class="funnel-card">
           <div class="funnel-bar" style="background:var(--muted)"></div>
-          <div class="funnel-icon">ðŸ“£</div>
+          <div class="funnel-icon">📣</div>
           <div class="funnel-step" style="color:var(--muted)">Topo</div>
-          <div class="funnel-title">AtraÃ§Ã£o</div>
-          <div class="funnel-items">Google Ads<br/>Meta Ads<br/>Lives de Aquecimento<br/>AlmoÃ§o com o CEO<br/>IndicaÃ§Ãµes</div>
+          <div class="funnel-title">Atração</div>
+          <div class="funnel-items">Google Ads<br/>Meta Ads<br/>Lives de Aquecimento<br/>Almoço com o CEO<br/>Indicações</div>
         </div>
         <div class="funnel-card">
           <div class="funnel-bar" style="background:var(--gold)"></div>
-          <div class="funnel-icon">ðŸ¤–</div>
+          <div class="funnel-icon">🤖</div>
           <div class="funnel-step" style="color:var(--gold)">Meio</div>
-          <div class="funnel-title">QualificaÃ§Ã£o</div>
-          <div class="funnel-items">FormulÃ¡rio de vendas<br/>Bot JÃºlio (WhatsApp)<br/>Classifica Cat-A / B / C</div>
+          <div class="funnel-title">Qualificação</div>
+          <div class="funnel-items">Formulário de vendas<br/>Bot Júlio (WhatsApp)<br/>Classifica Cat-A / B / C</div>
         </div>
         <div class="funnel-card">
           <div class="funnel-bar" style="background:var(--gold-light)"></div>
-          <div class="funnel-icon">ðŸ“ž</div>
+          <div class="funnel-icon">📞</div>
           <div class="funnel-step" style="color:var(--gold-light)">Fundo</div>
           <div class="funnel-title">Call Comercial</div>
           <div class="funnel-items">Consultor conduz a call<br/>Identifica dor e fit<br/>Apresenta produto certo</div>
         </div>
         <div class="funnel-card">
           <div class="funnel-bar" style="background:var(--green)"></div>
-          <div class="funnel-icon">ðŸ†</div>
+          <div class="funnel-icon">🏆</div>
           <div class="funnel-step" style="color:var(--green)">Fechamento</div>
           <div class="funnel-title">Alto Ticket</div>
-          <div class="funnel-items">Mentoria Â· Consultoria<br/>FormaÃ§Ãµes Â· ImersÃµes<br/>LTV do cliente ViDi</div>
+          <div class="funnel-items">Mentoria · Consultoria<br/>Formações · Imersões<br/>LTV do cliente ViDi</div>
         </div>
       </div>
 
       <div class="callout callout-green" style="margin-top:24px">
-        <span class="callout-icon">ðŸ”‘</span>
-        <div class="callout-body"><strong>Cat-A:</strong> Faturamento acima de R$1M, sem plano de sucessÃ£o, exausto ou em plateau â€” acionar alerta humano imediatamente (Luiz Portal ou consultor comercial).</div>
+        <span class="callout-icon">🔑</span>
+        <div class="callout-body"><strong>Cat-A:</strong> Faturamento acima de R$1M, sem plano de sucessão, exausto ou em plateau — acionar alerta humano imediatamente (Luiz Portal ou consultor comercial).</div>
       </div>
     </section>
     <div class="divider"></div>
 
-    <!-- 8. RESUMO DE PREÃ‡OS -->
+    <!-- 8. RESUMO DE PREÇOS -->
     <section class="chapter reveal" id="precos">
-      <div class="chapter-eyebrow">08 Â· Uso Interno Â· Confidencial</div>
-      <h2 class="chapter-title">Resumo de PreÃ§os</h2>
+      <div class="chapter-eyebrow">08 · Uso Interno · Confidencial</div>
+      <h2 class="chapter-title">Resumo de Preços</h2>
 
       <div class="conf-bar" style="margin-bottom:20px">
-        ðŸ”’ NUNCA mencione valores em comunicaÃ§Ãµes pÃºblicas, redes sociais ou conversas que possam ser gravadas. Valores apenas em reuniÃµes comerciais privadas.
+        🔒 NUNCA mencione valores em comunicações públicas, redes sociais ou conversas que possam ser gravadas. Valores apenas em reuniões comerciais privadas.
       </div>
 
       <div class="table-wrap">
@@ -859,25 +859,25 @@
             <tr>
               <th>Produto</th>
               <th>Categoria</th>
-              <th>PreÃ§o</th>
+              <th>Preço</th>
               <th>Canal de Venda</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>FormaÃ§Ã£o do LÃ­der</td><td>Digital / Online</td><td class="price-cell">R$ 698</td><td>Time Comercial</td></tr>
-            <tr><td>FormaÃ§Ã£o do CEO</td><td>Digital / Online</td><td class="price-cell">R$ 698</td><td>Time Comercial Â· Resgate de leads</td></tr>
-            <tr><td>CÃºpula CEO â€” Ingresso Standard</td><td>Evento Presencial</td><td class="price-cell">R$ 1.497</td><td>Google Ads Â· Meta Ads Â· Lives Â· IndicaÃ§Ãµes</td></tr>
-            <tr><td>VIP Pass</td><td>Upsell Evento</td><td class="price-cell">R$ 8.998</td><td>Bot JÃºlio Â· no check-in</td></tr>
-            <tr><td>CÃºpula Dinner</td><td>Upsell Evento</td><td class="price-cell">R$ 8.998</td><td>Bot JÃºlio Â· Cat-A Â· Lim. 20 pessoas</td></tr>
-            <tr><td>Pacote SÃ³cio</td><td>Upsell Evento</td><td class="price-cell">R$ 749 / sÃ³cio</td><td>Bot JÃºlio Â· 2+ sÃ³cios</td></tr>
-            <tr><td>DiagnÃ³stico Catalyst</td><td>MÃ©dio Ticket</td><td class="price-cell">R$ 248</td><td>Bot JÃºlio Â· Upsell evento</td></tr>
-            <tr><td>Virtual Pass</td><td>Downsell</td><td class="price-cell">R$ 749</td><td>Quem nÃ£o pode comparecer</td></tr>
-            <tr><td>CEO Toolkit</td><td>Downsell</td><td class="price-cell">R$ 449</td><td>Quem nÃ£o estÃ¡ pronto</td></tr>
-            <tr><td>O CÃ³digo da Nova LideranÃ§a (Luiz)</td><td>Mentoria Individual</td><td class="price-cell">R$ 39.990</td><td>Time Comercial Â· Lim. 10 mentorados</td></tr>
-            <tr><td>Mentoria em Grupo ViDi</td><td>Mentoria Grupo</td><td class="confirm-cell">A confirmar</td><td>Time Comercial Â· Lim. 10 pessoas</td></tr>
-            <tr><td>Mentoria CEO (Ibrahim)</td><td>Mentoria Individual</td><td class="price-cell">R$ 59.998</td><td>Via Luiz Portal Â· Time Comercial</td></tr>
+            <tr><td>Formação do Líder</td><td>Digital / Online</td><td class="price-cell">R$ 698</td><td>Time Comercial</td></tr>
+            <tr><td>Formação do CEO</td><td>Digital / Online</td><td class="price-cell">R$ 698</td><td>Time Comercial · Resgate de leads</td></tr>
+            <tr><td>Cúpula CEO — Ingresso Standard</td><td>Evento Presencial</td><td class="price-cell">R$ 1.497</td><td>Google Ads · Meta Ads · Lives · Indicações</td></tr>
+            <tr><td>VIP Pass</td><td>Upsell Evento</td><td class="price-cell">R$ 998</td><td>Bot Júlio · no check-in</td></tr>
+            <tr><td>Cúpula Dinner</td><td>Upsell Evento</td><td class="price-cell">R$ 8.998</td><td>Bot Júlio · Cat-A · Lim. 20 pessoas</td></tr>
+            <tr><td>Pacote Sócio</td><td>Upsell Evento</td><td class="price-cell">R$ 749 / sócio</td><td>Bot Júlio · 2+ sócios</td></tr>
+            <tr><td>Diagnóstico Catalyst</td><td>Médio Ticket</td><td class="price-cell">R$ 248</td><td>Bot Júlio · Upsell evento</td></tr>
+            <tr><td>Virtual Pass</td><td>Downsell</td><td class="price-cell">R$ 749</td><td>Quem não pode comparecer</td></tr>
+            <tr><td>CEO Toolkit</td><td>Downsell</td><td class="price-cell">R$ 449</td><td>Quem não está pronto</td></tr>
+            <tr><td>O Código da Nova Liderança (Luiz)</td><td>Mentoria Individual</td><td class="price-cell">R$ 39.990</td><td>Time Comercial · Lim. 10 mentorados</td></tr>
+            <tr><td>Mentoria em Grupo ViDi</td><td>Mentoria Grupo</td><td class="confirm-cell">A confirmar</td><td>Time Comercial · Lim. 10 pessoas</td></tr>
+            <tr><td>Mentoria CEO (Ibrahim)</td><td>Mentoria Individual</td><td class="price-cell">R$ 59.998</td><td>Via Luiz Portal · Time Comercial</td></tr>
             <tr><td>Consultoria ViDi</td><td>Consultoria</td><td class="confirm-cell">A confirmar</td><td>Time Comercial</td></tr>
-            <tr><td>FormaÃ§Ãµes / ImersÃµes</td><td>Presencial</td><td class="confirm-cell">A confirmar</td><td>Time Comercial</td></tr>
+            <tr><td>Formações / Imersões</td><td>Presencial</td><td class="confirm-cell">A confirmar</td><td>Time Comercial</td></tr>
           </tbody>
         </table>
       </div>
@@ -894,13 +894,13 @@
   <div class="footer-contacts">
     <div class="footer-contact"><strong>Luiz Portal</strong>luizeduardoportal@gmail.com</div>
     <div class="footer-contact"><strong>Ibrahim Boufleur</strong>iboufleur@gmail.com</div>
-    <div class="footer-contact"><strong>ClÃ©ber Donato â€” Tech Lead</strong>cleber.ihs@gmail.com</div>
+    <div class="footer-contact"><strong>Cléber Donato — Tech Lead</strong>cleber.ihs@gmail.com</div>
   </div>
-  <p class="footer-conf">Documento Confidencial â€” Uso Interno ViDi / Ecossistema Live â€” NÃ£o distribua externamente</p>
+  <p class="footer-conf">Documento Confidencial — Uso Interno ViDi / Ecossistema Live — Não distribua externamente</p>
 </footer>
 
 <script>
-  // Intersection Observer para animaÃ§Ãµes
+  // Intersection Observer para animações
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.08 });
@@ -922,4 +922,3 @@
 </script>
 </body>
 </html>
-
